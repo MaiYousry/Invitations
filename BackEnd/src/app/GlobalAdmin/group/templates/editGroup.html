@@ -1,0 +1,28 @@
+<div class="modal-content">
+    <div class="modal-header bordered">
+        <button class="close" type="button" ng-click="editGroupCtrl.close()">×</button>
+        <h2 class="pmd-card-title-text">{{'UpdateGroupLbl' | translate}}</h2>
+    </div>
+    <div class="modal-body" > 
+        {{'GroupInfo' | translate}}      
+
+        <form class="form-horizontal" name="newGroupForm" autocomplete="off">
+                
+                <div class="form-group pmd-textfield pmd-textfield-floating-label pmd-textfield-floating-label-completed">
+                        <label for="first-name">{{'GroupNameLbl' | translate}}</label>
+                        <input required type="text" class="mat-input form-control" name="groupName" ng-pattern="/^(\D)+$/" ng-model="editGroupCtrl.groupObj.groupName"  ng-minlength="3" ng-maxlength="50">
+                        <div ng-messages="newGroupForm.groupName.$error" class="error">
+                            <div ng-show="newGroupForm.groupName.$error.pattern">{{'TextOnly' | translate}}</div>
+                            <div ng-if="newGroupForm.groupName.$error.required && !newGroupForm.groupName.$pristine">{{'requiredErr' | translate}}</div>
+                            <div ng-if="(newGroupForm.groupName.$error.minlength || newGroupForm.groupName.$error.maxlength) && !newGroupForm.groupName.$error.required">{{'NameLengthError' | translate}}</div>
+                        </div>
+                    </div>
+        </form> 
+        <div class="pmd-modal-action text-right">
+            <button ng-disabled="newGroupForm.$invalid" class="btn pmd-ripple-effect btn-primary" type="button" ng-click="UpdateGroup()">{{'Edit' | translate}}</button>
+        </div>
+    
+    </div>
+</div>
+
+    

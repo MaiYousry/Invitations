@@ -1,0 +1,40 @@
+<div >
+       
+    <div style="margin-bottom:10px">
+            <button  ng-click="templateCtrl.AddTemplate()" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">{{'AddBtn' | translate}}</button>
+    </div> 
+    
+    <div ng-if="templateCtrl.Templates.results.length == 0">
+            <span>{{'NoTemplateAvailable' | translate}}</span>
+    </div>
+
+    <div class="pmd-card pmd-z-depth pmd-card-custom-view" ng-if="templateCtrl.Templates.results.length > 0">
+        <div class="table-responsive">
+            <table class="table pmd-table table-hover">
+                <thead>
+                    <tr> 
+                        <th >{{'Templatelbl' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="template in templateCtrl.Templates.results"> 
+                        <td data-title="Image" ><img ng-src="{{template.templateURL}}" ng-alt="{{template.templateName}}" style="max-height: 200px;max-width: 200px;"/></td>
+                        <td ng-class="{'red-text': user.isActive == false }" width="15%">
+                            <i class="cursorPointer" ng-click="templateCtrl.DeleteTemplate(template.templateID)">{{'deleteBtn' | translate}} </i>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <div style="text-align:center;" paging page="1" page-size="10" total="templateCtrl.Templates.totalCount" paging-action="templateCtrl.changePage( page)"
+        flex="nogrow" show-prev-next="true" show-first-last="true" hide-if-empty="true" disabled-class="hide">
+            </div> -->
+    </div> 
+    
+    <div style="text-align:center;" paging page="1" page-size="10" total="templateCtrl.Templates.totalCount" paging-action="templateCtrl.changePage(page)"
+         flex="nogrow" show-prev-next="true" show-first-last="true" hide-if-empty="true" disabled-class="hide">
+    </div>
+    
+</div>					
+    

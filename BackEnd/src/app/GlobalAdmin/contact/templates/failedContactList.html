@@ -1,0 +1,41 @@
+<div class="modal-content">
+    <div class="modal-header bordered">
+        <button class="close" type="button" ng-click="failedContactCtrl.close()">×</button>
+        <h2 class="pmd-card-title-text">{{'FailedContactLbl' | translate}}</h2>
+    </div>
+
+    <div class="modal-body">
+            <!-- {{'ContactInfo' | translate}}    -->
+            <span class="error">{{'NameValidationDetails' | translate}}   </span> <br>
+            <span class="error">{{'EmailValidationDetails' | translate}}   </span><br>
+            <span class="error">{{'NumbertValidationDetails' | translate}}   </span>
+
+            <div ng-if="failedContactCtrl.failedList.length == 0">
+                <span>{{'NoFailedAvailable' | translate}}</span>
+            </div>
+        
+            <div class="pmd-card pmd-z-depth pmd-card-custom-view" ng-if=" failedContactCtrl.failedList.length >0">
+
+                <div class="table-responsive">
+                    <table class="table pmd-table table-hover">
+                        <thead>
+                            <tr>
+                                <th>{{'ContactName' | translate}}</th>
+                                <th>{{'ContactEmail' | translate}}</th>
+                                <th>{{'ContactMobileNum' | translate}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="contact in failedContactCtrl.failedList">
+                                <td  data-title="Name" width="20%">{{contact.contactName}}</td>
+                                <td  data-title="Name" width="20%">{{contact.contactEmail}}</td>
+                                <td  data-title="Name" width="20%">{{contact.contactMobileNum}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+            </div>
+
+    </div>
+</div>

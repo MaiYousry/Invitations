@@ -1,0 +1,94 @@
+<div>
+    <div style="margin-bottom:10px">
+        <!-- <button ng-click="$state.go('addGroup');" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">{{'AddGroupBtn' | translate}}</button> -->
+        <button ng-click="contactCtrl.AddContact()" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">{{'AddBtn' | translate}}</button>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group pmd-textfield pmd-textfield-floating-label pmd-textfield-floating-label-completed">
+                    <label>{{'FilterByGroup' | translate}}  *</label>
+                    <br/>
+                    <select class="select-simple form-control pmd-select2"
+                        ng-change="showSelectID()"   ng-model="contactCtrl.selectedGroup" ng-options="group as group.groupName for group in contactCtrl.groupList track by group.groupID" required>
+
+                    </select>
+                </div>
+        </div>
+    </div>
+
+    <!-- <div ng-if="contactCtrl.contactList.results.length == 0">
+        <span>{{'NoContactAvailable' | translate}}</span>
+    </div> -->
+
+    <form class="form-horizontal" name="fileForm">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group pmd-textfield pmd-textfield-floating-label pmd-textfield-floating-label-completed">
+                    <label for="first-name">{{'UploadExcel' | translate}}</label>
+                    <input required id ="selectedFile" name="selectedFile" type="file" class="form-control" onchange="angular.element(this).scope().loadFile(this.files)" />
+                    <br/>
+
+                    <div ng-init="myVar = 'http://invitationsbackend.azurewebsites.net/ExcelSample/Contacts.xlsx'">
+                        <p><a ng-href="{{myVar}}">{{'DownloadSample' | translate}}</a></p>
+                    </div>
+
+                    <!-- <br/> -->
+
+                    <!-- <input ng-disabled="contactCtrl.fileUpload == null" type="button" value="{{'Upload' | translate}}"  class="btn pmd-ripple-effect btn-primary pmd-z-depth"
+                            ng-click="handleFile()" /> -->
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <input ng-disabled="fileForm.$invalid || selectedFile == null" type="button" value="{{'Upload' | translate}}"  class="btn pmd-ripple-effect btn-primary pmd-z-depth" ng-click="handleFile()" />
+    <p ng-bind="msg" class="error"></p>
+    <br>
+
+    <div ng-if="contactCtrl.contactList.results.length == 0">
+        <span>{{'NoContactAvailable' | translate}}</span>
+    </div>
+
+    <div class="pmd-card pmd-z-depth pmd-card-custom-view" ng-if=" contactCtrl.contactList.results.length >0">
+
+        <div class="table-responsive">
+            <table class="table pmd-table table-hover">
+                <thead>
+                    <tr>
+                        <th>{{'ContactName' | translate}}</th>
+                        <th>{{'ContactEmail' | translate}}</th>
+                        <th>{{'ContactMobileNum' | translate}}</th>
+                        <th>{{'ContactGroups' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="contact in contactCtrl.contactList.results">
+                        <td  data-title="Name" width="20%">{{contact.contactName}}</td>
+                        <td  data-title="Name" width="20%">{{contact.contactEmail}}</td>
+                        <td  data-title="Name" width="20%">{{contact.contactMobileNum}}</td>
+                        <td  data-title="Name" width="20%" >
+
+                            <span ng-repeat="group in contact.contactGroups">
+                                    {{group.groupName}}
+                                    <br>
+                            </span>
+
+                            <!-- <button ng-click="contactCtrl.ShowGroupsForCertainContact(contact.contactID)"><strong>{{'ContactGroups' | translate}}</strong>
+                            </button> -->
+                        </td>
+                        <td ng-class="{'red-text': user.isActive == false }" width="15%">
+                            <i class="cursorPointer" ng-click="contactCtrl.UpdateContact(contact)">{{'Edit' | translate}} </i>
+                            <i class="cursorPointer" ng-click="contactCtrl.DeleteContact(contact.contactID, contact.contactName)">{{'deleteBtn' | translate}} </i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div style="text-align:center;" paging page="1" page-size="10" total="contactCtrl.contactList.totalCount" paging-action="contactCtrl.changePage(page)"
+         flex="nogrow" show-prev-next="true" show-first-last="true" hide-if-empty="true" disabled-class="hide">
+    </div>
+</div>

@@ -1,0 +1,9 @@
+E:\Projects\Invitations_GMG\Invitations.Common\bin\Debug\Invitations.Common.dll
+E:\Projects\Invitations_GMG\Invitations.Common\bin\Debug\Invitations.Common.pdb
+E:\Projects\Invitations_GMG\Invitations.Common\obj\Debug\Invitations.Common.dll
+E:\Projects\Invitations_GMG\Invitations.Common\obj\Debug\Invitations.Common.pdb
+E:\Projects\Invitations_GMG\API\Invitations.Common\bin\Debug\Invitations.Common.dll
+E:\Projects\Invitations_GMG\API\Invitations.Common\bin\Debug\Invitations.Common.pdb
+E:\Projects\Invitations_GMG\API\Invitations.Common\obj\Debug\Invitations.Common.dll
+E:\Projects\Invitations_GMG\API\Invitations.Common\obj\Debug\Invitations.Common.pdb
+E:\Projects\Invitations_GMG\API\Invitations.Common\obj\Debug\Invitations.Common.csprojResolveAssemblyReference.cache

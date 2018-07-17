@@ -1,0 +1,10 @@
+E:\Projects\Invitations_GMG\API\Invitations.Resources\bin\Release\Invitations.Resources.dll
+E:\Projects\Invitations_GMG\API\Invitations.Resources\bin\Release\Invitations.Resources.pdb
+E:\Projects\Invitations_GMG\API\Invitations.Resources\bin\Release\ar-EG\Invitations.Resources.resources.dll
+E:\Projects\Invitations_GMG\API\Invitations.Resources\obj\Release\Invitations.Resources.csprojResolveAssemblyReference.cache
+E:\Projects\Invitations_GMG\API\Invitations.Resources\obj\Release\Invitations.Resources.Resource.resources
+E:\Projects\Invitations_GMG\API\Invitations.Resources\obj\Release\Invitations.Resources.Resource.ar-EG.resources
+E:\Projects\Invitations_GMG\API\Invitations.Resources\obj\Release\Invitations.Resources.csproj.GenerateResource.Cache
+E:\Projects\Invitations_GMG\API\Invitations.Resources\obj\Release\ar-EG\Invitations.Resources.resources.dll
+E:\Projects\Invitations_GMG\API\Invitations.Resources\obj\Release\Invitations.Resources.dll
+E:\Projects\Invitations_GMG\API\Invitations.Resources\obj\Release\Invitations.Resources.pdb

@@ -1,0 +1,53 @@
+E:\Vlabs\Backend\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+E:\Vlabs\Backend\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+E:\Vlabs\Backend\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+E:\Vlabs\Backend\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+E:\Vlabs\Backend\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+E:\Vlabs\Backend\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+C:\Users\Sherif\Desktop\Vlabs\Backend\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+C:\Users\Sherif\Desktop\Vlabs\Backend\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+C:\Users\Sherif\Desktop\Vlabs\Backend\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+C:\Users\Sherif\Desktop\Vlabs\Backend\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+C:\Users\Sherif\Desktop\Vlabs\Backend\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+C:\Users\Sherif\Desktop\Vlabs\Backend\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+C:\Users\Sherif\Documents\Visual Studio 2015\Projects\ECatalog\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+C:\Users\Sherif\Documents\Visual Studio 2015\Projects\ECatalog\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+C:\Users\Sherif\Documents\Visual Studio 2015\Projects\ECatalog\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+C:\Users\Sherif\Documents\Visual Studio 2015\Projects\ECatalog\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+C:\Users\Sherif\Documents\Visual Studio 2015\Projects\ECatalog\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+C:\Users\Sherif\Documents\Visual Studio 2015\Projects\ECatalog\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+E:\Projects\E-Menu\E-Catalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+E:\Projects\E-Menu\E-Catalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+E:\Projects\E-Menu\E-Catalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+E:\Projects\E-Menu\E-Catalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+E:\Projects\E-Menu\E-Catalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+C:\Users\Sherif\Desktop\Projects\E-Catalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+C:\Users\Sherif\Desktop\Projects\E-Catalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+C:\Users\Sherif\Desktop\Projects\E-Catalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+C:\Users\Sherif\Desktop\Projects\E-Catalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+C:\Users\Sherif\Desktop\Projects\E-Catalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+C:\Users\Sherif\Desktop\Projects\E-Catalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+E:\Projects\E-Menu\E-Catalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+E:\Projects\ECatalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+E:\Projects\ECatalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+E:\Projects\ECatalog\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+E:\Projects\ECatalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+E:\Projects\ECatalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+E:\Projects\ECatalog\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+E:\Projects\Invitations\Invitations\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+E:\Projects\Invitations\Invitations\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+E:\Projects\Invitations\Invitations\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+E:\Projects\Invitations\Invitations\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+E:\Projects\Invitations\Invitations\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+E:\Projects\Invitations_GMG\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+E:\Projects\Invitations_GMG\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+E:\Projects\Invitations_GMG\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+E:\Projects\Invitations_GMG\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache
+E:\Projects\Invitations_GMG\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+E:\Projects\Invitations_GMG\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+E:\Projects\Invitations_GMG\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll.config
+E:\Projects\Invitations_GMG\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.dll
+E:\Projects\Invitations_GMG\API\Frameworks\Repository.Pattern\bin\Debug\Repository.Pattern.pdb
+E:\Projects\Invitations_GMG\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.dll
+E:\Projects\Invitations_GMG\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.pdb
+E:\Projects\Invitations_GMG\API\Frameworks\Repository.Pattern\obj\Debug\Repository.Pattern.csprojResolveAssemblyReference.cache

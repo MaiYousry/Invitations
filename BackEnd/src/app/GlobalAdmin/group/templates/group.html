@@ -1,0 +1,35 @@
+<div>
+    <div style="margin-bottom:10px">
+        <!-- <button ng-click="$state.go('addGroup');" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">{{'AddGroupBtn' | translate}}</button> -->
+        <button ng-click="groupCtrl.AddGroup()" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">{{'AddBtn' | translate}}</button>
+    </div>
+    <div ng-if="groupCtrl.groupList.results.length == 0">
+        <span>{{'NogroupAvailable' | translate}}</span>
+    </div>
+
+    <div class="pmd-card pmd-z-depth pmd-card-custom-view" ng-if=" groupCtrl.groupList.results.length >0">
+
+        <div class="table-responsive">
+            <table class="table pmd-table table-hover">
+                <thead>
+                    <tr>
+                        <th>{{'groupName' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="group in groupCtrl.groupList.results">
+                        <td  data-title="Name" width="20%">{{group.groupName}}</td>
+                        <td ng-class="{'red-text': user.isActive == false }" width="15%">
+                            <i class="cursorPointer" ng-click="groupCtrl.UpdateGroup(group)">{{'Edit' | translate}} </i>
+                            <i class="cursorPointer" ng-click="groupCtrl.DeleteGroup(group.groupID, group.groupName)">{{'deleteBtn' | translate}} </i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div style="text-align:center;" paging page="1" page-size="10" total="groupCtrl.groupList.totalCount" paging-action="groupCtrl.changePage(page)"
+         flex="nogrow" show-prev-next="true" show-first-last="true" hide-if-empty="true" disabled-class="hide">
+    </div>
+</div>

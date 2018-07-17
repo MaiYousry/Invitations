@@ -1,0 +1,36 @@
+<div class="modal-content">
+        <div class="modal-header bordered">
+            <button class="close" type="button" ng-click="contactGroupsContactCtrl.close()">×</button>
+            <h2 class="pmd-card-title-text">{{'ContactGroups' | translate}}</h2>
+        </div>
+    
+        <div class="modal-body">
+                <!-- {{'ContactInfo' | translate}}    -->
+            <form class="form-horizontal" name="newContactForm" autocomplete="off">
+    
+                <div class="pmd-card pmd-z-depth pmd-card-custom-view" ng-if=" contactGroupsContactCtrl.groupsContactList.length >0">
+
+                    <div class="table-responsive">
+                        <table class="table pmd-table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>{{'groupName' | translate}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="group in contactGroupsContactCtrl.groupsContactList">
+                                    <td  data-title="Name" width="20%">{{group.groupName}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            
+                </div>
+    
+    
+            </form>
+    
+        </div>
+    </div>
+    
+    

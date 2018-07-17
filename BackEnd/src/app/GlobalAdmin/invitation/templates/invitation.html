@@ -1,0 +1,169 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+        
+		// $(".select-simple").select2({
+		// 	theme: "bootstrap",
+		// 	minimumResultsForSearch: Infinity,
+		// });
+		// $(".select-with-search").select2({
+		// 	theme: "bootstrap"
+		// });
+		$(".select-tags").select2({
+			tags: false,
+			theme: "bootstrap",
+		});
+		// $(".select-add-tags").select2({
+		// 	tags: true,
+        //     theme: "bootstrap",
+        //     insertTag: function (data, tag) {
+        //         // Insert the tag at the end of the results
+        //         data.push(tag);
+        //         // console.log(data);
+        //     }
+        //});
+        
+        $(function () {
+                $('#invitationDateTime').datetimepicker(
+                    {
+                        minDate: new Date()
+                    }
+                );
+            });
+	});
+</script>
+
+<style id="dynamicStyle">
+    /* .form-control{
+        background-image: url("http://localhost:33343/api/Templates/8/Image");
+        background-repeat: no-repeat;
+        
+    } */
+    
+    /* .ta-scroll-window>.ta-bind{
+        min-height: 1000px !important;
+        min-width: 100px !important;
+    } */
+</style>
+
+<!-- <script>
+    var dynamic = $('#dynamicStyle');
+    //update the contents of a style element over and over
+    setInterval(function(){
+        dynamic.html('.form-control{ background-image: url( ' + randomColor() + ');}');
+    }, 750);
+    
+    function randomColor(){
+        return 'http://localhost:33343/api/Templates/10/Image';
+    }
+</script> -->
+
+<div>   
+
+
+
+    <form class="form-horizontal" name="newInvitationForm">
+    
+        <div style="padding-left:1%" class="pmd-card pmd-z-depth pmd-card-custom-view">
+                
+            <label for="first-name">{{'SelectTemplateLbl' | translate}} *</label>
+            <div class="row">
+                <div ng-repeat="template in invitationCtrl.Templates">
+                    <div class="col-md-2">
+                        <label style="padding-right: 20px" >
+                            <div class="column">
+                                <div class="row-md-2">
+                                    <div class="row">
+                                        <input ng-change='newSelection(invitationCtrl.selectedTemplateId)' type="radio" ng-model="invitationCtrl.selectedTemplateId" value="{{template.templateID}}" name="template" id="radio-{{template.templateID}}"/>
+                                        <img ng-src="{{template.templateURL}}" style="height: 200px;width: 150px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div ng-messages="newInvitationForm.template.$error" class="error">
+                <div ng-if="invitationCtrl.selectedTemplateId <=0  && !newInvitationForm.template.$pristine">{{'requiredErr' | translate}}</div>
+            </div>
+
+            <br>
+            <div style="margin-bottom:10px">
+                <button  ng-click="invitationCtrl.AddTemplate()" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">{{'AddTemplateBtn' | translate}}</button>
+            </div> 
+        </div>
+
+        <!-- <img id="imageDimensions" style="display:none;" ng-src="{{invitationCtrl.SelectedTemplateURL}}"/> -->
+
+        <label for="first-name">{{'InvitationDescriptionLbl' | translate}}</label>
+        <!-- ng-style="{'background-image':'url({{invitationCtrl.SelectedTemplateURL}})'}" -->
+        <text-angular ng-model="invitationCtrl.htmlVariable" ></text-angular> 
+        
+        <br>
+
+        <!-- Select Invitees -->
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <label for="first-name">{{'SelectInviteesLbl' | translate}} *</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
+                <select ng-change="invitationCtrl.ChangeSelectedInvitees(invitationCtrl.selectedInvitees)" name="selectInvitees" required style="width:100% !important" class="form-control select-tags pmd-select2-tags" multiple
+                ng-model="invitationCtrl.selectedInvitees"
+                ng-options="invitee as invitee.displayName group by invitee.tag for invitee in invitationCtrl.InviteesList">
+                </select>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-6">
+                <label for="first-name">{{invitationCtrl.viewedConsumedValue}} / {{invitationCtrl.TotalInvitees}} ({{'ConsumedInviteesLbl' | translate}} / {{'TotalInviteesLbl' | translate}})</label>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div ng-messages="newInvitationForm.selectInvitees.$error" class="error">
+                    <div ng-if="newInvitationForm.selectInvitees.$error.required  && !newInvitationForm.selectInvitees.$pristine">{{'requiredErr' | translate}}</div>
+                </div>
+                <div ng-messages="newInvitationForm.selectInvitees.$error" class="error">
+                    <div ng-if="invitationCtrl.viewedConsumedValue > invitationCtrl.TotalInvitees">{{'exceedAllowedInvitees' | translate}}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Select Invitees -->
+    
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                    <label for="first-name">{{'InvitationNameLbl' | translate}} *</label>
+                    <input required type="text" class="mat-input form-control" name="invitationName" ng-model="invitationCtrl.InvitationName" ng-minlength="3" ng-maxlength="50">
+                    <div ng-messages="newInvitationForm.invitationName.$error" class="error">
+                            <div ng-if="newInvitationForm.invitationName.$error.required && !newInvitationForm.invitationName.$pristine">{{'requiredErr' | translate}}</div>
+                            <div ng-if="(newInvitationForm.invitationName.$error.minlength || newInvitationForm.invitationName.$error.maxlength) && !newInvitationForm.invitationName.$error.required">{{'NameLengthError' | translate}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="form-group pmd-textfield">
+                        <label for="regular1" class="control-label">{{'invitationDateTimeLbl' | translate}}</label>
+                        <input name="datetimeTxt" type="text" data-ng-model="invitationCtrl.invitationDateTime" id="invitationDateTime" class="form-control" required />
+                        <div ng-messages="newInvitationForm.datetimeTxt.$error" class="error">
+                            <div ng-if="newInvitationForm.datetimeTxt.$error.required  && !newInvitationForm.datetimeTxt.$pristine">{{'requiredErr' | translate}}</div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </form>
+    <!-- <iframe src="http://localhost:9091/#!/viewTemplate" style="border:none;" height="200" width="300"></iframe> -->
+
+    <div class="pmd-modal-action text-left">
+        <button ng-disabled="newInvitationForm.$invalid || invitationCtrl.selectedTemplateId <=0 || invitationCtrl.viewedConsumedValue > invitationCtrl.TotalInvitees" class="btn pmd-ripple-effect btn-primary" type="button" ng-click="AddNewInvitation()">{{'SendBtn' | translate}}</button>
+        <button ng-disabled="invitationCtrl.selectedTemplateId <=0" ng-click="invitationCtrl.viewInvitation()" class="btn pmd-ripple-effect btn-primary" type="button">{{'ViewInvitationBtn' | translate}}</button>
+    </div>
+</div>
+
+

@@ -1,0 +1,5 @@
+E:\Projects\Invitations_GMG\API\Invitations.Common\bin\Release\Invitations.Common.dll
+E:\Projects\Invitations_GMG\API\Invitations.Common\bin\Release\Invitations.Common.pdb
+E:\Projects\Invitations_GMG\API\Invitations.Common\obj\Release\Invitations.Common.csprojResolveAssemblyReference.cache
+E:\Projects\Invitations_GMG\API\Invitations.Common\obj\Release\Invitations.Common.dll
+E:\Projects\Invitations_GMG\API\Invitations.Common\obj\Release\Invitations.Common.pdb

@@ -1,0 +1,33 @@
+<div>
+    <div ng-if="invitationHistoryCtrl.invitationList.results.length == 0">
+        <span>{{'NoInvitationAvailable' | translate}}</span>
+    </div>
+
+    <div class="pmd-card pmd-z-depth pmd-card-custom-view" ng-if=" invitationHistoryCtrl.invitationList.results.length >0">
+        <div class="table-responsive">
+            <table class="table pmd-table table-hover">
+                <thead>
+                    <tr>
+                        <th>{{'InvitationNameLbl' | translate}}</th>
+                        <th>{{'invitationDateTimeLbl' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="invitation in invitationHistoryCtrl.invitationList.results">
+                        <!-- <td data-title="Name" width="20%"><a ng-href="{{invitationHistoryCtrl.inviteesURL}}{{invitation.invitationID}}" >{{invitation.invitationName}}</a></td> -->
+                        <td data-title="Name" width="20%">{{invitation.invitationName}}</td>
+                        <td data-title="Name" width="20%">{{invitation.invitationDateTime | date:'MMMM dd, yyyy'}}</td>
+                        <td ng-class="{'red-text': user.isActive == false }" width="15%">
+                            <button ng-click="invitationHistoryCtrl.InvitationDetails(invitation.invitationID)" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">{{'viewInvitation' | translate}}</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div style="text-align:center;" paging page="1" page-size="10" total="invitationHistoryCtrl.invitationList.totalCount" paging-action="invitationHistoryCtrl.changePage(page)"
+        flex="nogrow" show-prev-next="true" show-first-last="true" hide-if-empty="true" disabled-class="hide">
+    </div>
+</div>
+    

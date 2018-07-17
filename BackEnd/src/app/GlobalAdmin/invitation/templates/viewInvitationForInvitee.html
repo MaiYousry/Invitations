@@ -1,0 +1,43 @@
+<style id="dynamicStyleViewInv">
+</style>
+<style>
+    .success{
+        color: green;
+    }
+</style>
+
+<div class="row">
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-2">
+        <button ng-show="viewInvitationForInviteeCtrl.ShowHideCond" class="btn pmd-ripple-effect btn-primary" ng-click="viewInvitationForInviteeCtrl.confirmInvitation()" type="button">{{'ConfirmBtn' | translate}}</button>
+    </div>
+    <div class="col-md-1">
+        <button ng-show="viewInvitationForInviteeCtrl.ShowHideCond" class="btn pmd-ripple-effect btn btn-danger" ng-click="viewInvitationForInviteeCtrl.rejectInvitation()" type="button">{{'RejectBtn' | translate}}</button>
+    </div>
+</div>
+
+<div class="row">
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-8">
+        <div class="success" ng-if="viewInvitationForInviteeCtrl.InviteeInfo.inviteeStatus == viewInvitationForInviteeCtrl.confirmStat">
+            <span>{{'ConfirmationMsg' | translate}}</span>
+        </div>    
+        <div class="error" ng-if="viewInvitationForInviteeCtrl.InviteeInfo.inviteeStatus == viewInvitationForInviteeCtrl.rejectStat">
+            <span>{{'RejectionMsg' | translate}}</span>
+        </div>    
+    </div>
+</div>
+
+
+
+
+<br>
+
+<div  class="viewInvInvClass" ng-bind-html="htmlTag">
+</div>
+<!-- <div  class="modal-body" ng-bind-html="htmlTag" style=" background-image: URL({{imageUrl}}); height: 200%;background-repeat: no-repeat;">
+</div> -->
+
+
+
+

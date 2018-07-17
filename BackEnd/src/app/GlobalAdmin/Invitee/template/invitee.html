@@ -1,0 +1,40 @@
+<style id="dynamicStyleHistory">
+</style>
+
+<div  class="invitationHistoryClass" ng-bind-html="inviteeCtrl.html">
+</div>
+
+<div>
+    <div ng-if="inviteeCtrl.inviteesOfInvitationList.results.length == 0">
+        <span>{{'NoInvitationAvailable' | translate}}</span>
+    </div>
+
+    <div class="pmd-card pmd-z-depth pmd-card-custom-view" ng-if=" inviteeCtrl.inviteesOfInvitationList.results.length >0">
+
+        <div class="table-responsive">
+            <table class="table pmd-table table-hover">
+                <thead>
+                    <tr>
+                        <th>{{'InviteeNameLbl' | translate}}</th>
+                        <th>{{'InviteeEmailLbl' | translate}}</th>
+                        <th>{{'InviteeMobileNumberLbl' | translate}}</th>
+                        <th>{{'InviteeStatus' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="invitee in inviteeCtrl.inviteesOfInvitationList.results">
+                        <td data-title="Name" width="20%">{{invitee.contact.contactName}}</td>
+                        <td data-title="Name" width="20%">{{invitee.contact.contactEmail}}</td>
+                        <td data-title="Name" width="20%">{{invitee.contact.contactMobileNum}}</td>
+                        <td data-title="Name" width="20%">{{invitee.inviteeStatus}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div style="text-align:center;" paging page="1" page-size="10" total="inviteeCtrl.inviteesOfInvitationList.totalCount" paging-action="inviteeCtrl.changePage(page)"
+        flex="nogrow" show-prev-next="true" show-first-last="true" hide-if-empty="true" disabled-class="hide">
+    </div>
+</div>
+    
